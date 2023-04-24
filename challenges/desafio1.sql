@@ -2,6 +2,7 @@
 
 -- DROP DATABASE IF EXISTS SpotifyClone;
 -- CREATE DATABASE IF NOT EXISTS SpotifyClone;
+
 -- CREATE TABLE SpotifyClone.tabela1(
 --     coluna1 tipo restricoes,
 --     coluna2 tipo restricoes,
