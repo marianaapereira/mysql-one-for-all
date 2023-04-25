@@ -67,14 +67,14 @@ CREATE TABLE cancao(
   FOREIGN KEY(album_id) REFERENCES album(id)
 );
 
-CREATE TABLE cancao_favorita(
-  pessoa_usuaria_id INTEGER NOT NULL,
-  cancao_id INTEGER NOT NULL,
+-- CREATE TABLE cancao_favorita(
+--   pessoa_usuaria_id INTEGER NOT NULL,
+--   cancao_id INTEGER NOT NULL,
 
-  CONSTRAINT PRIMARY KEY(pessoa_usuaria_id, cancao_id),
-    FOREIGN KEY(pessoa_usuaria_id) REFERENCES pessoa_usuaria(id),
-    FOREIGN KEY(cancao_id) REFERENCES cancao(id)
-);
+--   CONSTRAINT PRIMARY KEY(pessoa_usuaria_id, cancao_id),
+--     FOREIGN KEY(pessoa_usuaria_id) REFERENCES pessoa_usuaria(id),
+--     FOREIGN KEY(cancao_id) REFERENCES cancao(id)
+-- );
 
 CREATE TABLE reproducao(
   pessoa_usuaria_id INTEGER NOT NULL,
@@ -158,21 +158,21 @@ INSERT INTO cancao(titulo, duracao_segundos, album_id)
     ('The Bard''s Song', '244', '7'),
     ('Feeling Good', '100', '8');
 
-INSERT INTO cancao_favorita(pessoa_usuaria_id, cancao_id)
-  VALUES
-    ('1', '3'),
-    ('1', '6'),
-    ('1', '10'),
-    ('2', '4'),
-    ('3', '1'),
-    ('3', '3'),
-    ('4', '4'),
-    ('4', '7'),
-    ('5', '2'),
-    ('5', '10'),
-    ('8', '4'),
-    ('9', '7'),
-    ('10', '3');
+-- INSERT INTO cancao_favorita(pessoa_usuaria_id, cancao_id)
+--   VALUES
+--     ('1', '3'),
+--     ('1', '6'),
+--     ('1', '10'),
+--     ('2', '4'),
+--     ('3', '1'),
+--     ('3', '3'),
+--     ('4', '4'),
+--     ('4', '7'),
+--     ('5', '2'),
+--     ('5', '10'),
+--     ('8', '4'),
+--     ('9', '7'),
+--     ('10', '3');
 
 INSERT INTO reproducao(pessoa_usuaria_id, cancao_id, data_reproducao)
   VALUES
